@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Form Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Create Your Custom Form</h1>
+
+    <div class="add-field-section">
+      <select id="fieldType">
+        <option value="text">Text</option>
+        <option value="email">Email</option>
+        <option value="number">Number</option>
+        <option value="textarea">Textarea</option>
+      </select>
+      <input type="text" id="fieldLabel" placeholder="Enter Field Label">
+      <button type="button" id="addFieldButton">➕ Add Field</button>
+    </div>
+
+    <form id="form">
+      <div id="formFields"></div>
+      <div class="button-container">
+        <button type="button" id="saveButton">💾 Save Data</button>
+        <button type="button" id="previewButton">👁 Preview</button>
+      </div>
+    </form>
+
+    <div class="preview" id="previewDiv" style="display: none;">
+      <h2>Preview Your Information</h2>
+      <div id="previewContent"></div>
+      <div class="button-container">
+        <button id="submitButton">✔ Submit</button>
+        <button id="editButton">✏ Edit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
